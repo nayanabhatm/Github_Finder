@@ -1,0 +1,17 @@
+@import '../../config';
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+.grid {
+  @media (min-width: 300px) {
+    @include gridSmallScreen;
+  }
+  @media (min-width: 600px) {
+    @include gridMediumScreen;
+  }
+  @media (min-width: 1000px) {
+    @include gridLargeScreen;
+  }
+}

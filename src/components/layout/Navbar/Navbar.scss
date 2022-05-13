@@ -1,0 +1,41 @@
+@import '../../../_config.scss';
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: darken($color: $bg, $amount: 20%);
+  color: $white-text;
+
+  .logo {
+    font-size: large;
+    margin: 1%;
+    @include textDecoration;
+    strong {
+      padding: 0 10px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    li {
+      list-style: none;
+      margin: 5%;
+      cursor: pointer;
+      padding: 5%;
+      font-size: small;
+      &:hover {
+        background-color: lighten($color: $bg, $amount: 15%);
+        border-radius: 4px;
+      }
+
+      a {
+        @include textDecoration;
+      }
+    }
+  }
+}

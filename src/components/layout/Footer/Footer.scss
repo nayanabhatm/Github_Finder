@@ -1,0 +1,10 @@
+@import '../../../_config.scss';
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: darken($color: $bg, $amount: 5%);
+  // position: fixed;
+  // bottom: 0px;
+  width: 100vw;
+}

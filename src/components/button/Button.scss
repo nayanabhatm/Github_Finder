@@ -1,0 +1,16 @@
+@import '../../config';
+
+button {
+  background-color: $btn-bg;
+  border: none;
+  padding: 2%;
+  border-radius: 4px;
+  color: $white-text;
+  font-size: medium;
+  cursor: pointer;
+  width: auto;
+
+  &:hover {
+    background-color: darken($color: $btn-bg, $amount: 10%);
+  }
+}

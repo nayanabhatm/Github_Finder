@@ -1,0 +1,23 @@
+@import '../../../config';
+
+.user-details {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .link {
+    @include textDecoration;
+    font-size: smaller;
+    color: darken($color: $white-text, $amount: 30%);
+  }
+}

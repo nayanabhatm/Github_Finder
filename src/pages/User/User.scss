@@ -1,0 +1,131 @@
+@import '../../config';
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+
+  .avatar {
+    flex: 13%;
+    position: relative;
+
+    img {
+      opacity: 40%;
+      border-radius: 4px;
+      width: 100%;
+    }
+    p {
+      position: absolute;
+      margin-left: 2%;
+      bottom: 14%;
+    }
+    small {
+      margin-left: 2%;
+      position: absolute;
+      left: 0%;
+      bottom: 12%;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex: 67%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2%;
+
+    .name {
+      display: flex;
+      align-items: center;
+
+      p {
+        color: lightgreen;
+        padding: 2px 4px;
+        border-radius: 12px;
+        margin: 0 2%;
+        background-color: lighten($color: $bg, $amount: 10%);
+        font-size: small;
+        display: inline;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $white-text;
+      font-size: small;
+      border: 1px solid white;
+      padding: 0.5rem;
+      margin: 2% 0;
+      overflow: hidden;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      @include shadow;
+      padding: 0 2%;
+
+      & > * {
+        p {
+          overflow-wrap: anywhere;
+          &:first-of-type {
+            color: darken($color: $white-text, $amount: 25%);
+          }
+        }
+      }
+
+      .website,
+      .twitter {
+        @include vertical-line;
+        padding: 0 5%;
+      }
+    }
+  }
+}
+
+.followers-repos-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include shadow;
+  margin: 3%;
+  & > * {
+    p {
+      &:first-of-type {
+        color: darken($color: $white-text, $amount: 25%);
+      }
+    }
+    h2 {
+      margin-top: 0;
+      font-weight: bolder;
+    }
+    i {
+      font-size: 5vw;
+      color: rgb(230, 31, 216);
+    }
+  }
+
+  .followers,
+  .following,
+  .public-gists,
+  .public-repos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+
+  .following,
+  .public-gists,
+  .public-repos {
+    @include vertical-line;
+  }
+}
+.repos-list {
+  margin: 5%;
+
+  h2 {
+    margin-left: 1%;
+  }
+}

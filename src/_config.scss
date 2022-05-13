@@ -1,0 +1,40 @@
+$bg: #242933;
+$white-text: white;
+$btn-bg: #764abc;
+
+@mixin textDecoration {
+  text-decoration: none;
+  color: $white-text;
+}
+
+@mixin shadow {
+  border: darken($color: $bg, $amount: 40%);
+  box-shadow: 0px 0px 10px darken($color: $white-text, $amount: 75%);
+}
+
+@mixin vertical-line {
+  border-left: 1px solid darken($color: $white-text, $amount: 70%);
+}
+
+@mixin gridUsers {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5%;
+  margin: 0 1%;
+}
+
+@mixin gridSmallScreen {
+  @include gridUsers;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@mixin gridMediumScreen {
+  @include gridUsers;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin gridLargeScreen {
+  @include gridUsers;
+  grid-template-columns: repeat(3, 1fr);
+}

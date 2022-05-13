@@ -1,0 +1,8 @@
+@import '../../config';
+
+.card {
+  border-radius: 4px;
+  background-color: lighten($color: $bg, $amount: 7%);
+  padding: 1%;
+  margin: 1%;
+}

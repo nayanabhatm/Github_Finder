@@ -1,0 +1,43 @@
+@import '../../config';
+.repo-name {
+  display: flex;
+  align-items: center;
+  a {
+    @include textDecoration;
+    margin: 1%;
+  }
+}
+
+.repo-details {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+
+  .watchers,
+  .forks,
+  .stars,
+  .open-issues {
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    border-radius: 12px;
+    margin: 1%;
+
+    p {
+      margin: 3px;
+    }
+  }
+
+  .watchers {
+    background: blue;
+  }
+  .forks {
+    background: rgb(206, 206, 45);
+  }
+  .stars {
+    background: rgb(108, 146, 52);
+  }
+  .open-issues {
+    background: rgb(143, 56, 56);
+  }
+}
